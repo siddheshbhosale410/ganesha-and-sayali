@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+
+        }
+nav{
+  height: 30px;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  display:flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+nav h1{
+  color: #5e2a2a;
+  font-weight: 600;
+}
+
+.upper{
+    display: flex;
+    justify-content: center;
+    align-items: center
+    ;
+
+}
+
+.main1{
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.deco{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ele{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.ganesh{
+   
+    border: 1px solid;
+    border-radius: 100px;
+    border-color: goldenrod;
+    box-shadow: 0 12px 22px rgba(0,0,0,0.15);
+}
+.shlok{
+    display: flex;
+    justify-content: center;
+    border: 1px;
+    border-radius: 30px;
+    box-shadow: 0 12px 22px rgba(0,0,0,0.15);
+}
+
+
+
+
+    /* photo pair + couple section (personal photos bride & groom) */
+    .photo-pair {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin: 30px 0;
+    }
+    .couple-card {
+      background: linear-gradient(135deg, #fff5e6, #ffefdf);
+      border-radius: 48px;
+      padding: 20px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+      border: 1px solid #f7cf9a;
+    }
+    .couple-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 30px;
+      /* border: 4px solid #2a2827; */
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    }
+    .couple-info {
+      flex: 1;
+      min-width: 180px;
+      text-align: center;
+    }
+    .couple-info h3 {
+      color: #b8431c;
+      font-size: 1.6rem;
+      font-family: 'Cinzel', serif;
+    }
+    .couple-info p {
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: #5a3a24;
+    }
+    .shubh-mandap {
+      text-align: center;
+      margin: 10px 0;
+    }
+    .shubh-mandap img {
+      max-width: 40%;
+      border-radius: 48px;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.15);
+      /* border: 2px solid #f7c56e; */
+    }
+
+    .para {
+      width: 90%;
+      margin: 16px auto;
+      font-size: 1rem;
+      line-height: 1.5;
+      /* background: rgba(255, 248, 225, 0.9); */
+      padding: 16px;
+      border-radius: 36px;
+      backdrop-filter: blur(4px);
+      color: #4a2c1a;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+    }
+
+    
+    /* PRE-WEDDING SLIDESHOW SECTION (personal photos of bride & groom) */
+    .slides-wrapper {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7e5cf;
+}
+
+.slide-img {
+  max-width: 100%;
+  max-height: 420px;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* shows full image */
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+  .slide-img {
+    max-height: 300px;
+  }
+}.video-reel-container {
+    height: 100vh; /* Full screen height */
+    width: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* Snaps video to center */
+    background: #000;
+}
+
+/* Hide scrollbar */
+.video-reel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.reel-item {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auto-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Fills screen vertically */
+}
+
+.sound-toggle {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    pointer-events: none; /* Let clicks pass through to the video */
+}
+
+</style>
+
+
+<title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <nav><h1>Ganesh</h1><h3>love</h3><h1>sayli</h1></nav>
+        <div class="main1">
+            <!-- left uper div -->
+             <div class="upper">
+                <img src="https://i.pinimg.com/1200x/74/98/02/749802843440b1f361befa17daf6b2ba.jpg" height="50px" alt="">
+                            
+            </div>
+            <!-- middel  -->
+             <div class="middel"><img src="https://i.pinimg.com/1200x/ee/1f/b9/ee1fb9687e3b7c1356d7c3ca08305774.jpg"  height="200px"></div>
+             
+             <!-- right uper div -->
+              <div class="upper"><img src="https://i.pinimg.com/1200x/2a/a0/f1/2aa0f1a9f728d66713c7945ad3d584d9.jpg"  height="50px"></div>
+            </div>
+            <!-- ele and ganesh deco -->
+            <div class="deco">
+                <div class="ele"><img src="https://i.pinimg.com/736x/ad/97/e7/ad97e7b0163d61f09b3c7f76a743a96e.jpg"  height="150px"></div>
+                <div class="ganesha"><img src="https://i.pinimg.com/736x/51/2a/70/512a705ac3acbce35a74131416ad890b.jpg"  height="400px" class="ganesh"></div>
+                <div class="ele"><img src="https://i.pinimg.com/736x/ad/97/e7/ad97e7b0163d61f09b3c7f76a743a96e.jpg"  height="150px"></div>
+            </div>
+            <!-- ganpati shlok -->
+            <div class="shlok" ><img src="https://i.pinimg.com/1200x/a9/85/30/a9853096f1e3d7c4a8fe02d5c178cbda.jpg" height="200px" width="500px"></div>
+            
+    </div>
+
+   <!-- groom & bride PERSONAL DETAILS with personal photos (using same images but you can replace) -->
+<div class="container">
+  <div class="photo-pair">
+    <div class="couple-card">
+      <img class="couple-img" src="./ganesh.jpeg" alt="Ganesh Personal" onerror="this.src='https://i.pinimg.com/736x/95/54/41/955441590c157d5f054b3bc23a3271af.jpg'">
+      <div class="couple-info">
+        <h3>चि. गणेश</h3>
+        <p>कै. गोपाळ मारुती भोसले यांचे नातू <br> व सौ. श्री. नयना दत्तात्रय गोपाळ भोसले यांचे ज्येष्ठ चिरंजीव <br> मु. पो. पाले, ता.भोर, जि. पुणे</p>
+      </div>
+    </div>
+    <div class="shubh-mandap">
+      <img src="https://i.pinimg.com/1200x/b4/ec/ff/b4ecff2326bcbc1e006a35ddc9ad71f1.jpg" alt="मंगल मंडप सजावट">
+    </div>
+    <div class="couple-card">
+      <img class="couple-img" src="./sayli.jpeg"Sayali Personal" onerror="this.src='https://i.pinimg.com/736x/95/54/41/955441590c157d5f054b3bc23a3271af.jpg'">
+      <div class="couple-info">
+        <h3>चि.सौ. का. सायली</h3>
+        <p>कै. गंगाराम बाबू आंब्रे यांची नात <br> व श्री. सूर्यकांत गंगाराम आंब्रे यांची द्वितीय कन्या <br> मु. सडवली, ता. लांजा जि. रत्नागिरी</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- info about lagan -->
+  <div class="para">
+    <p>गणपतीच्या कृपेने आम्ही आपल्याला आमच्या विवाह सोहळ्यात प्रेमाने आमंत्रित करतो. गणेश आणि सायली यांच्या लग्नाचे हे स्वप्न पूर्ण होत आहे. आपल्या सहवासाने सोहळा साजरा करा.</p>
+  </div>
+
+<!-- pre wedding photo -->
+<!-- PRE-WEDDING SLIDESHOW : exclusively pre-wedding moments of Ganesh & Sayali (personal photos) -->
+<div class="container">
+  <div class="slideshow-section">
+    <!-- <div class="slideshow-title"><i class="fas fa-heart"></i> आमचे प्री-वेडिंग फोटो | Pre-wedding Moments <i class="fas fa-camera"></i></div> -->
+    <div class="slider-container">
+      <div class="slides-wrapper" id="preWeddingSlider">
+        <!-- Pre-wedding photos - using couple images and also some romantic stock to represent personal, replace with actual -->
+        <img class="slide-img" src="./IMG_7556.JPG" alt="Ganesh Sayali prewedding 1" onerror="this.src='https://i.pinimg.com/564x/95/54/41/955441590c157d5f054b3bc23a3271af.jpg'">
+        <img class="slide-img" src="./IMG_7557.JPG" alt="prewedding 2" onerror="this.src='https://i.pinimg.com/564x/91/ae/bf/91aebfb77c060a79403b4c97ee3afb4c.jpg'">
+        <img class="slide-img" src="./IMG_7558 (2).JPG" alt="romantic couple" onerror="this.src='https://i.pinimg.com/736x/95/54/41/955441590c157d5f054b3bc23a3271af.jpg'">
+        <img class="slide-img" src="./IMG_7559.JPG.jpeg" alt="pre wedding 4" onerror="this.src='https://i.pinimg.com/1200x/b4/ec/ff/b4ecff2326bcbc1e006a35ddc9ad71f1.jpg'">
+        <img class="slide-img" src="./IMG_7560.JPG.jpeg" alt="couple mehendi" onerror="this.src='https://i.pinimg.com/564x/91/ae/bf/91aebfb77c060a79403b4c97ee3afb4c.jpg'">
+        <img class="slide-img" src="./IMG_7561.JPG.jpeg" alt="ganesh sayali love" onerror="this.src='https://i.pinimg.com/736x/95/54/41/955441590c157d5f054b3bc23a3271af.jpg'">
+        <img class="slide-img" src="./WhatsApp Image 2026-04-08 at 7.06.25 PM.jpeg">  
+    </div>
+   
+</div>
+
+<br><br>
+<!-- reel section -->
+<div class="video-reel-container">
+    <div class="reel-item">
+        <video class="auto-video" loop muted playsinline>
+            <source src="./BEACH REEL.mp4" type="video/mp4">
+        </video>
+        <div class="sound-toggle">🔇 Tap for Sound</div>
+    </div>
+
+    <div class="reel-item">
+        <video class="auto-video" loop muted playsinline>
+            <source src="video2.mp4" type="video/mp4">
+        </video>
+        <div class="sound-toggle">🔇 Tap for Sound</div>
+    </div>
+</div>
+</div>
+
+    
+    <script>
+
+         // AUTO SLIDESHOW for PRE-WEDDING PHOTOS (2 seconds interval)
+ const slidesWrapper = document.getElementById('preWeddingSlider');
+
+if (slidesWrapper) {
+  let slides = Array.from(slidesWrapper.children);
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  // Ensure proper slide sizing
+  slides.forEach(slide => {
+    slide.style.minWidth = '100%';
+    slide.style.flex = '0 0 100%';
+  });
+slidesWrapper.style.willChange = 'transform';
+  // FIX: faster, smoother transition
+  slidesWrapper.style.transition = 'transform 0.8s ease-in-out';
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    slidesWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }, 3000); // give time for animation
+}
+
+
+// reel section 
+const allVideos = document.querySelectorAll(".auto-video");
+
+// 1. Logic to Play/Pause on scroll
+const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.play();
+        } else {
+            entry.target.pause();
+            entry.target.currentTime = 0; // Optional: Reset to start
+        }
+    });
+}, { threshold: 0.7 });
+
+allVideos.forEach(v => {
+    videoObserver.observe(v);
+
+    // 2. Logic to Unmute on click (to play the song)
+    v.parentElement.addEventListener("click", () => {
+        if (v.muted) {
+            v.muted = false;
+            v.parentElement.querySelector(".sound-toggle").innerHTML = "🔊 Sound On";
+        } else {
+            v.muted = true;
+            v.parentElement.querySelector(".sound-toggle").innerHTML = "🔇 Muted";
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
