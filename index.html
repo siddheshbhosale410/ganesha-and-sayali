@@ -9,6 +9,11 @@
       margin: 0px;
       padding: 0px;
     }
+    .slider-container {
+  width: 100%;
+  overflow: hidden;   /* 🔥 THIS FIXES YOUR ISSUE */
+  position: relative;
+}
     .ganesh {
   animation: glow 2s infinite alternate;
 }
@@ -199,12 +204,13 @@ img:hover {
       transition: transform 0.8s ease-in-out;
     }
 
-    .slide {
-      min-width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .slide {
+  min-width: 100%;
+  flex: 0 0 100%;   /* 🔥 important */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
     .slide-img {
       max-width: 100%;
@@ -587,8 +593,7 @@ img:hover {
     </div>
   </div>
 
-  <br><br>
-  <footer></footer>
+
 
   <script>
     const slidesWrapper = document.getElementById('preWeddingSlider');
